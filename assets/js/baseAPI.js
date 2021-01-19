@@ -16,7 +16,7 @@ $.ajaxPrefilter(function (options) {
 
     // 3.拦截未通过身份验证的响应
     options.complete = function (res) {
-        console.log(res);
+        // console.log(res);
         var obj = res.responseJSON
         if (obj.status !== 0 && obj.message === "身份认证失败！") {
             // console.log(111);
